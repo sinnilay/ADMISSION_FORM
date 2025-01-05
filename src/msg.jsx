@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 function MSG() {
   const [sd,setsd] = useState(true)
@@ -11,6 +11,9 @@ function MSG() {
   const [d2, sd2] = useState("hidden");
   const [navdisplayfoemoble, setnavdisplayformobile] = useState("hidden");
   const [flag2, setflag2] = useState(true);
+  function greet(){
+    alert("COMMING SOON....")
+  }
   function handleclick() {
     if (flag) {
       setnavdisplay("hidden");
@@ -46,8 +49,15 @@ function MSG() {
       setflag2(false);
     }
   }
-
+  function call() {
+    alert("SITE IS UNDER DEVLOPMENT MANY MORE UPDATES TO COME")
+  }
+  useEffect(() => {
+   
+    call()
+  }, []);
   return (
+    
     <>
       <div className="flex h-auto bg-gray-100">
         {/* Left Sidebar */}
@@ -67,19 +77,19 @@ function MSG() {
             </button>
           </div>
           <ul className="space-y-2 mt-5">
-            <li className="hover:text-gray-300 cursor-pointer">
+            <li className="hover:text-gray-300 cursor-pointer" onClick={greet}>
               <b>Admission Form</b>
             </li>
-            <li className="hover:text-gray-300 cursor-pointer">
+            <li className="hover:text-gray-300 cursor-pointer" onClick={greet}>
               <b>Download/Pdf</b>
             </li>
-            <li className="hover:text-gray-300 cursor-pointer">
+            <li className="hover:text-gray-300 cursor-pointer" onClick={greet}>
               <b>Payment</b>
             </li>
-            <li className="hover:text-gray-300 cursor-pointer">
+            <li className="hover:text-gray-300 cursor-pointer" onClick={greet}>
               <b>Syllabus</b>
             </li>
-            <li className="hover:text-gray-300 cursor-pointer">
+            <li className="hover:text-gray-300 cursor-pointer" onClick={greet}>
               <b>Add New Applicant</b>
             </li>
           </ul>
